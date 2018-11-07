@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AddActivity"
+            android:label="@string/add_contacts_str"
+            android:parentActivityName=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjbaucas.addressbook.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

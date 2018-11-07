@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">AddressBook</string>
 
-    <string name="add_contacts">Add Contacts</string>
-    <string name="search_contacts">Search Contacts</string>
-    <string name="show_contacts">Show All</string>
+    <string name="add_contacts_str">Add Contacts</string>
+    <string name="search_contacts_str">Search Contacts</string>
+    <string name="show_contacts_str">Show All</string>
+
+    <string name="add_btn_str">Add</string>
+    <string name="cancel_btn_str">Cancel</string>
+
+    <string name="add_first_name_str">First Name: </string>
+    <string name="add_last_name_str">Last Name: </string>
+    <string name="add_email_str">Email: </string>
+    <string name="add_phone_number_str">Phone Number: </string>
 
 </resources>

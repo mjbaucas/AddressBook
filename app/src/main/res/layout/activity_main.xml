@@ -19,21 +19,21 @@
             android:id="@+id/add_contacts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add_contacts"
+            android:text="@string/add_contacts_str"
             android:layout_weight="1"/>
 
         <Button
             android:id="@+id/search_contacts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/search_contacts"
+            android:text="@string/search_contacts_str"
             android:layout_weight="1"/>
 
         <Button
             android:id="@+id/view_all_contacts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/show_contacts"
+            android:text="@string/show_contacts_str"
             android:layout_weight="1"/>
 
     </LinearLayout>

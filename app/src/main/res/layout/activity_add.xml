@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:weightSum="30">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_first_name_str"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/add_first_name_fld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_last_name_str"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/add_last_name_fld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_email_str"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/add_email_fld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_phone_number_str"
+            android:textSize="18sp"
+            android:layout_weight="1"/>
+        <EditText
+            android:id="@+id/add_phone_number_fld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:weightSum="2"
+            android:layout_weight="2">
+
+            <Button
+                android:id="@+id/add_contact_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/add_btn_str"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/cancel_add_contact_btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/cancel_btn_str"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
