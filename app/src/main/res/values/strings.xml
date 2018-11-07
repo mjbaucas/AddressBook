@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">AddressBook</string>
+
+    <string name="add_contacts">Add Contacts</string>
+    <string name="search_contacts">Search Contacts</string>
+    <string name="show_contacts">Show All</string>
+
 </resources>
