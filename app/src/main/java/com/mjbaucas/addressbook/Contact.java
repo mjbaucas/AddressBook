@@ -45,7 +45,7 @@ public class Contact {
         this.email = email;
     }
 
-    public void setPhoneNumber(String firstName) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 }

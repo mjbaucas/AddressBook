@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         showBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent showIntent = new Intent(MainActivity.this, ShowActivity.class);
+                startActivity(showIntent);
             }
         });
     }

@@ -76,10 +76,10 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/cancel_add_contact_btn"
+                android:id="@+id/back_add_contact_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/cancel_btn_str"
+                android:text="@string/back_btn_str"
                 android:layout_weight="1" />
         </LinearLayout>
 

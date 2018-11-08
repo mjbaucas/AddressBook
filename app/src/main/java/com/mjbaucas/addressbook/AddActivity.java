@@ -16,7 +16,7 @@ public class AddActivity extends AppCompatActivity {
     EditText phoneNumberFld;
 
     Button addBtn;
-    Button cancelBtn;
+    Button backBtn;
 
     SQLiteHelper db;
 
@@ -40,8 +40,8 @@ public class AddActivity extends AppCompatActivity {
             }
         });
 
-        cancelBtn = findViewById(R.id.cancel_add_contact_btn);
-        cancelBtn.setOnClickListener(new View.OnClickListener() {
+        backBtn = findViewById(R.id.back_add_contact_btn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
@@ -75,9 +75,12 @@ public class AddActivity extends AppCompatActivity {
 
         if (check){
             Contact newContact = new Contact(firstName, lastName, email, phoneNumber);
-            db.addContact(newContact);
-            Toast.makeText(this, "Successfully added contact", Toast.LENGTH_LONG).show();
-            clearFields();
+            if (db.addContact(this, newContact)){
+                Toast.makeText(this, "Successfully added contact", Toast.LENGTH_LONG).show();
+                finish();
+            } else {
+                phoneNumberFld.setText("");
+            }
         }
     }
 

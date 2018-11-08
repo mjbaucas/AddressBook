@@ -3,8 +3,10 @@ package com.mjbaucas.addressbook;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteConstraintException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,12 +22,13 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREAATE_CONTACT_TABLE = "CREATE TABLE contacts (" +
+        String CREATE_CONTACT_TABLE = "CREATE TABLE contacts (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "firstName TEXT, " +
                 "lastName TEXT, " +
-                "email TEXT, " +
-                "phoneNumber TEXT PRIMARY KEY)";
-        db.execSQL(CREAATE_CONTACT_TABLE);
+                "email TEXT," +
+                "phoneNumber TEXT UNIQUE)";
+        db.execSQL(CREATE_CONTACT_TABLE);
     }
 
     @Override
@@ -34,7 +37,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         this.onCreate(db);
     }
 
-    public void addContact(Contact contact){
+    public boolean addContact(Context context, Contact contact){
         SQLiteDatabase db = this.getReadableDatabase();
 
         ContentValues values = new ContentValues();
@@ -43,7 +46,13 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         values.put("email", contact.getEmail());
         values.put("phoneNumber", contact.getPhoneNumber());
 
-        db.insert("contacts", null, values);
+        try {
+            db.insertOrThrow("contacts", null, values);
+            return true;
+        } catch (SQLiteConstraintException e) {
+            Toast.makeText(context, "Phone number needs to be unique", Toast.LENGTH_LONG).show();
+            return false;
+        }
     }
 
     public List<Contact> getAllCOntacts(){
@@ -56,10 +65,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         if (cursor.moveToFirst()){
             do {
                 contact = new Contact();
-                contact.setFirstName(cursor.getString(0));
-                contact.setLastName(cursor.getString(1));
-                contact.setEmail(cursor.getString(2));
-                contact.setPhoneNumber(cursor.getString(3));
+                contact.setFirstName(cursor.getString(1));
+                contact.setLastName(cursor.getString(2));
+                contact.setEmail(cursor.getString(3));
+                contact.setPhoneNumber(cursor.getString(4));
 
                 contacts.add(contact);
             } while(cursor.moveToNext());

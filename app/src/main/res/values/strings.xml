@@ -5,8 +5,12 @@
     <string name="search_contacts_str">Search Contacts</string>
     <string name="show_contacts_str">Show All</string>
 
+    <string name="add_contacts_tab">AddressBook: Add Contacts</string>
+    <string name="search_contacts_tab">AddressBook: Search Contacts</string>
+    <string name="show_contacts_tab">AddressBook: Show All</string>
+
     <string name="add_btn_str">Add</string>
-    <string name="cancel_btn_str">Cancel</string>
+    <string name="back_btn_str">Back</string>
 
     <string name="add_first_name_str">First Name: </string>
     <string name="add_last_name_str">Last Name: </string>
