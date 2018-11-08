@@ -55,6 +55,13 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         }
     }
 
+    public boolean deleteContact(Context context, Contact contact) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        db.delete("contacts", "phoneNumber=?", new String[]{contact.getPhoneNumber()});
+        return true;
+    }
+
     public List<Contact> getAllCOntacts(){
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM contacts";
