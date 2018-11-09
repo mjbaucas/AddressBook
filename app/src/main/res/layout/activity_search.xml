@@ -19,7 +19,7 @@
             android:textSize="15sp"
             android:layout_weight="1"/>
         <EditText
-            android:id="@+id/add_first_name_fld"
+            android:id="@+id/search_first_name_fld"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp"
@@ -32,20 +32,7 @@
             android:textSize="15sp"
             android:layout_weight="1"/>
         <EditText
-            android:id="@+id/add_last_name_fld"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:layout_weight="1" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/email_str"
-            android:textSize="15sp"
-            android:layout_weight="1"/>
-        <EditText
-            android:id="@+id/add_email_fld"
+            android:id="@+id/search_last_name_fld"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp"
@@ -58,7 +45,7 @@
             android:textSize="15sp"
             android:layout_weight="1"/>
         <EditText
-            android:id="@+id/add_phone_number_fld"
+            android:id="@+id/search_phone_number_fld"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15sp"
@@ -73,17 +60,17 @@
             android:layout_weight="2">
 
             <Button
-                android:id="@+id/back_add_contact_btn"
+                android:id="@+id/back_search_contact_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/back_btn_str"
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/add_contact_btn"
+                android:id="@+id/search_contact_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/add_btn_str"
+                android:text="@string/search_btn_str"
                 android:layout_weight="1" />
         </LinearLayout>
 

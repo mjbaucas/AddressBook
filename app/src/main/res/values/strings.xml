@@ -11,10 +11,11 @@
 
     <string name="add_btn_str">Add</string>
     <string name="back_btn_str">Back</string>
+    <string name="search_btn_str">Search</string>
 
-    <string name="add_first_name_str">First Name: </string>
-    <string name="add_last_name_str">Last Name: </string>
-    <string name="add_email_str">Email: </string>
-    <string name="add_phone_number_str">Phone Number: </string>
+    <string name="first_name_str">First Name: </string>
+    <string name="last_name_str">Last Name: </string>
+    <string name="email_str">Email: </string>
+    <string name="phone_number_str">Phone Number: </string>
 
 </resources>
