@@ -86,5 +86,4 @@ public class ResultsActivity extends AppCompatActivity {
             resultList.addView(tempLayout);
         }
     }
-
 }

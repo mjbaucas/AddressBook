@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class SQLiteHelper extends SQLiteOpenHelper {
@@ -81,6 +83,13 @@ public class SQLiteHelper extends SQLiteOpenHelper {
             } while(cursor.moveToNext());
         }
 
+        Collections.sort(contacts, new Comparator<Contact>() {
+            @Override
+            public int compare(Contact o1, Contact o2) {
+                return o1.getFirstName().compareToIgnoreCase(o2.getFirstName());
+            }
+        });
+
         return contacts;
     }
 
@@ -131,6 +140,13 @@ public class SQLiteHelper extends SQLiteOpenHelper {
                 contacts.add(contact);
             } while(cursor.moveToNext());
         }
+
+        Collections.sort(contacts, new Comparator<Contact>() {
+            @Override
+            public int compare(Contact o1, Contact o2) {
+                return o1.getFirstName().compareToIgnoreCase(o2.getFirstName());
+            }
+        });
 
         return contacts;
     }

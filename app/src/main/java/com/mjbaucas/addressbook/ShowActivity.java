@@ -35,8 +35,13 @@ public class ShowActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+        contactLister.removeAllViews();
+        populateContactList();
     }
 
     public void populateContactList(){
