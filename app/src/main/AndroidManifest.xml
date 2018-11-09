@@ -43,6 +43,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.mjbaucas.addressbook.MainActivity" />
         </activity>
+        <activity
+            android:name=".ResultsActivity"
+            android:label="@string/results_tab"
+            android:parentActivityName=".SearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mjbaucas.addressbook.SearchActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -8,6 +8,8 @@
     <string name="add_contacts_tab">AddressBook: Add Contacts</string>
     <string name="search_contacts_tab">AddressBook: Search Contacts</string>
     <string name="show_contacts_tab">AddressBook: Show All</string>
+    <string name="results_tab">AddressBook: Search Results</string>
+
 
     <string name="add_btn_str">Add</string>
     <string name="back_btn_str">Back</string>

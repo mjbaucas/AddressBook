@@ -83,4 +83,55 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
         return contacts;
     }
+
+    public List<Contact> searchContacts(String firstName, String lastName, String phoneNumber){
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String selection = "";
+        List<String> fields = new ArrayList<>();
+        int set = 0;
+        if (!firstName.isEmpty()){
+            selection = selection + "firstName = ?";
+            fields.add(firstName);
+            set = 1;
+        }
+
+        if (!lastName.isEmpty()){
+            if (set == 1){ selection = selection + " AND "; }
+            selection = selection + "lastName = ?";
+            fields.add(lastName);
+            set = 1;
+        }
+
+        if (!phoneNumber.isEmpty()){
+            if (set == 1){ selection = selection + " AND "; }
+            fields.add(phoneNumber);
+            selection = selection + "phoneNumber = ?";
+        }
+
+        String[] fieldArr = fields.toArray(new String[0]);
+        Cursor cursor = db.query(
+                "contacts",
+                new String[]{"id", "firstName", "lastName", "email", "phoneNumber"},
+                selection,
+                fieldArr,
+                null, null, null, null
+                );
+
+        List<Contact> contacts = new ArrayList<>();
+        Contact contact;
+        if (cursor.moveToFirst()){
+            do {
+                contact = new Contact();
+                contact.setFirstName(cursor.getString(1));
+                contact.setLastName(cursor.getString(2));
+                contact.setEmail(cursor.getString(3));
+                contact.setPhoneNumber(cursor.getString(4));
+
+                contacts.add(contact);
+            } while(cursor.moveToNext());
+        }
+
+        return contacts;
+    }
 }
