@@ -64,7 +64,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         return true;
     }
 
-    public List<Contact> getAllCOntacts(){
+    public List<Contact> getAllContacts(){
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM contacts";
         Cursor cursor = db.rawQuery(query, null);

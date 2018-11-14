@@ -45,7 +45,7 @@ public class ShowActivity extends AppCompatActivity {
     }
 
     public void populateContactList(){
-        final List<Contact> contactsList = db.getAllCOntacts();
+        final List<Contact> contactsList = db.getAllContacts();
         TextView tempView;
         LinearLayout tempLayout;
 
